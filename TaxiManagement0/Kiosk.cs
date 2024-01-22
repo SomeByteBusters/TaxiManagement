@@ -14,22 +14,28 @@ public class Kiosk(float Balance)
         set;
     }
 
-    public void BuyDrink(string type, float price, float volume, int count)
+    public void PrintEv()
     {
-        for(int i = count; i>0; i--)
-            Products.Add(new Drink(type, price, volume));
+        Console.WriteLine("Balance: {0}", Balance);
+        //Console.WriteLine("Products: {0}", Products);
     }
 
-    public void BuyPretzel(float price, bool buttered, int count)
+    public void BuyDrink(string type, float price, float cost, float exDate, float volume, int count=1)
     {
         for(int i = count; i>0; i--)
-            Products.Add(new Pretzel(price, buttered));
+            Products.Add(new Drink(type, price, cost, exDate, volume));
     }
 
-    public void SuyBrotchen(float price, string topping, int count)
+    public void BuyPretzel(float price, float cost, float exDate, bool buttered, int count)
+    {
+        for(int i = count; i>0; i--)
+            Products.Add(new Pretzel(price, cost, exDate, buttered));
+    }
+
+    public void BuyBrotchen(float price, float cost, float exDate, string topping, int count)
     {
         for(int i=count; i>0; i--)
-            Products.Add(new Brotchen(price, topping));
+            Products.Add(new Brotchen(price, cost, exDate, topping));
     }
 
     public void SellDrink(string type, float volume, int count = 1)
@@ -39,9 +45,12 @@ public class Kiosk(float Balance)
             if(product is Drink)
             {
                 Drink? drink = product as Drink;
-                if(drink?.Type == type && drink?.Volume == volume)
-                    
-                    
+                if (drink?.Type == type && drink?.Volume == volume)
+                {
+                    Balance += drink.Price;
+                    Products.Remove(drink);
+                    return;
+                }
             }
         }
     }
@@ -56,12 +65,12 @@ public class Kiosk(float Balance)
         
     }
 
-    public void SiscardBakeries()
+    public void DiscardBakeries()
     {
         
     }
 
-    public float getGain()
+    public float GetGain()
     {
         return 0;
     }

@@ -1,0 +1,15 @@
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/TaxiManagement0.GeneratedMSBuildEditorConfig.editorconfig
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/TaxiManagement0.AssemblyInfoInputs.cache
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/TaxiManagement0.AssemblyInfo.cs
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/TaxiManagement0.csproj.CoreCompileInputs.cache
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/TaxiManagement0.sourcelink.json
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/bin/Debug/net8.0/TaxiManagement0
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/bin/Debug/net8.0/TaxiManagement0.deps.json
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/bin/Debug/net8.0/TaxiManagement0.runtimeconfig.json
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/bin/Debug/net8.0/TaxiManagement0.dll
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/bin/Debug/net8.0/TaxiManagement0.pdb
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/TaxiManagement0.dll
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/refint/TaxiManagement0.dll
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/TaxiManagement0.pdb
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/TaxiManagement0.genruntimeconfig.cache
+/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/Debug/net8.0/ref/TaxiManagement0.dll
