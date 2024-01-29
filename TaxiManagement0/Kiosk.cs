@@ -17,14 +17,7 @@ public class Kiosk(float Balance)
     public void PrintEv()
     {
         Console.WriteLine("Balance: {0}", Balance);
-        float output = 0.0f;
-        foreach(var item in this.Products) {
-            float item_price = item.price;
-            float item_cost = item.cost;
-            float profit = item_cost - item_price; // TODO
-            output += profit;
-        }
-        Console.WriteLine("Possible Profit: {0}", output);
+
         //Console.WriteLine("Products: {0}", Products);
     }
 
@@ -107,6 +100,13 @@ public class Kiosk(float Balance)
 
     public float GetGain()
     {
-        return 0;
+        float output = 0.0f;
+        foreach(var item in this.Products) {
+            float item_price = item.price;
+            float item_cost = item.cost;
+            float profit = item_cost - item_price; // TODO
+            output += profit;
+        }
+        return output;
     }
 }
