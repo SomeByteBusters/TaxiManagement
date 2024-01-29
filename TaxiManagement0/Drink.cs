@@ -1,6 +1,6 @@
 namespace TaxiManagement0;
 
-public class Drink(string type, float price, float cost, float exDate, float volume, float volAlc = 0) : Product(price, cost, exDate)
+public class Drink(string type, float price, float cost, int exDate, float volume, float volAlc = 0) : Product(price, cost, exDate)
 {
     public string Type
     {

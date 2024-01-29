@@ -1,19 +1,22 @@
 namespace TaxiManagement0;
 
-public abstract class Product(float price, float cost, float exDate)
+public abstract class Product(float price, float cost, int exDate)
 {
-    protected float Price
+    public float Price
     {
         get;
+        protected set;
     } = price;
     
-    protected float Cost
+    public float Cost
     {
         get;
+        protected set;
     } = cost;
     
-    protected float ExDate
+    public int ExDate
     {
         get;
+        private set;
     } = exDate;
 }
