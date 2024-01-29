@@ -97,9 +97,12 @@ public class Kiosk(float Balance)
         }
     }
 
-    public void DiscardBakeries()
+    public void DiscardBakeries(int date)
     {
-        
+        foreach (var item in this.Products) {
+            if item.exDate > date
+                Products.Remove(item);
+        }
     }
 
     public float GetGain()
