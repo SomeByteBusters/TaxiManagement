@@ -65,12 +65,36 @@ public class Kiosk(float Balance)
 
     public void SellPretzel(bool buttered, int count = 1)
     {
-        
+        foreach (var product in Products)
+        {
+            if(product is Prezel)
+            {
+                Prezel? prezel = product as Prezel;
+                if (prezel?.buttered == buttered)
+                {
+                    Balance += prezel.Price;
+                    Products.Remove(prezel);
+                    return;
+                }
+            }
+        }
     }
 
     public void SellBrotchen(string topping, int count = 1)
     {
-        
+        foreach (var product in Products)
+        {
+            if(product is Brotchen)
+            {
+                Brotchen? brotchen = product as Brotchen;
+                if (brotchen?.topping == topping)
+                {
+                    Balance += brotchen.Price;
+                    Products.Remove(brotchen);
+                    return;
+                }
+            }
+        }
     }
 
     public void DiscardBakeries()
