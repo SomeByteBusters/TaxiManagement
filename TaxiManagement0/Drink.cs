@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace TaxiManagement0;
 
 public class Drink(string type, float price, float cost, int exDate, float volume, float volAlc = 0) : Product(price, cost, exDate)

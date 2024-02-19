@@ -1,6 +1,6 @@
 namespace TaxiManagement0;
 
-public class Kiosk(float Balance)
+public class Kiosk(float balance)
 {
     private List<Product> Products
     {
@@ -12,19 +12,24 @@ public class Kiosk(float Balance)
     {
         get;
         set;
-    }
+    } = balance;
 
     public void PrintEv()
     {
         Console.WriteLine("Balance: {0}", Balance);
+        foreach (var item in Products)
+            item.Print();
 
         //Console.WriteLine("Products: {0}", Products);
     }
 
     public void BuyDrink(string type, float price, float cost, int exDate, float volume, int count=1)
     {
-        for(int i = count; i>0; i--)
+        for (var i = count; i > 0; i--)
+        {
             Products.Add(new Drink(type, price, cost, exDate, volume));
+            this.Balance -= price;
+        }
     }
 
     public void BuyPretzel(float price, float cost, int exDate, bool buttered, int count)
@@ -33,24 +38,28 @@ public class Kiosk(float Balance)
             Products.Add(new Pretzel(price, cost, exDate, buttered));
     }
 
-    public void BuyBrotchen(float price, float cost, int exDate, string topping, int count)
+    public void BuyBrotchen(float price, float cost, int exDate, string type,  string topping, int count)
     {
-        for(int i=count; i>0; i--)
-            Products.Add(new Brotchen(price, cost, exDate, topping));
+        for(var i=count; i>0; i--)
+            Products.Add(new Brotchen(price, cost, exDate, type, topping));
     }
 
-    public void SellDrink(string type, float volume, int count = 1)
+    public void SellDrink(string type, float volume, int count)
     {
-        foreach (var product in Products)
+        for (int i = count; i > 0; i--)
         {
-            if(product is Drink)
+            foreach (var product in Products)
             {
-                Drink? drink = product as Drink;
-                if (drink?.Type == type && Equals(drink.Volume, volume))
+                try
                 {
+                    if (product is not Drink drink) continue;
+                    if (!Equals(drink.Volume, volume) || !Equals(drink.Type, type)) continue;
                     Balance += drink.Price;
                     Products.Remove(drink);
-                    return;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
                 }
             }
         }
@@ -60,16 +69,12 @@ public class Kiosk(float Balance)
     {
         foreach (var product in Products)
         {
-            if(product is Prezel)
-            {
-                Prezel? prezel = product as Prezel;
-                if (prezel?.buttered == buttered)
-                {
-                    Balance += prezel.Price;
-                    Products.Remove(prezel);
-                    return;
-                }
-            }
+            if (product is not Pretzel pretzel) continue;
+            if (pretzel.Buttered != buttered) continue;
+            
+            Balance += pretzel.Price;
+            Products.Remove(pretzel);
+            return;
         }
     }
 
@@ -77,36 +82,25 @@ public class Kiosk(float Balance)
     {
         foreach (var product in Products)
         {
-            if(product is Brotchen)
-            {
-                Brotchen? brotchen = product as Brotchen;
-                if (brotchen?.topping == topping)
-                {
-                    Balance += brotchen.Price;
-                    Products.Remove(brotchen);
-                    return;
-                }
-            }
+            if (product is not Brotchen brotchen) continue;
+            if (brotchen?.Topping != topping) continue;
+            
+            Balance += brotchen.Price;
+            Products.Remove(brotchen);
+            return;
         }
     }
 
     public void DiscardBakeries(int date)
     {
         foreach (var item in this.Products) {
-            if item.exDate > date
+            if(item.ExDate > date)
                 Products.Remove(item);
         }
     }
 
     public float GetGain()
     {
-        float output = 0.0f;
-        foreach(var item in this.Products) {
-            float item_price = item.price;
-            float item_cost = item.cost;
-            float profit = item_cost - item_price; // TODO
-            output += profit;
-        }
-        return output;
+        return Products.Sum(item => item.Price - item.Cost);
     }
 }

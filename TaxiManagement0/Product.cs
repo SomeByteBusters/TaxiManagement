@@ -19,4 +19,5 @@ public abstract class Product(float price, float cost, int exDate)
         get;
         private set;
     } = exDate;
+    public void Print() => Console.WriteLine($"Price: {Price}, Cost: {Cost}, ExDate: {ExDate}");
 }
