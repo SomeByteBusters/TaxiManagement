@@ -156,4 +156,17 @@ public class Kiosk(float balance)
     {
         return Products.Sum(item => item.Price - item.Cost);
     }
+
+    public void print_all_by_name(string name) {
+        string[] drink_names = {"getränke", "getränk", "drink", "drinks"};
+        string[] pretzel_names = {"pretzel", "brezel", "pretzeln", "brezeln"};
+        string[] brotchen_names = {"brot", "brötchen"};
+        name = name.ToLower().Trim();
+
+        foreach (var p_name in pretzel_names) {
+            if (p_name == name) { print_all_pretzels() }
+        }
+        
+
+    }
 }
