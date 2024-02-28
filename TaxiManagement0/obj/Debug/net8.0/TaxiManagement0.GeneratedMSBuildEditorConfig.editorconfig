@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TaxiManagement0
-build_property.ProjectDir = /Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/
+build_property.ProjectDir = /Users/matthesneumann/Desktop/Dev/School/TaxiManagement0/TaxiManagement0/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

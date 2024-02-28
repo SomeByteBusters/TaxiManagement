@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/TaxiManagement0.csproj": {}
+    "/Users/matthesneumann/Desktop/Dev/School/TaxiManagement0/TaxiManagement0/TaxiManagement0.csproj": {}
   },
   "projects": {
-    "/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/TaxiManagement0.csproj": {
+    "/Users/matthesneumann/Desktop/Dev/School/TaxiManagement0/TaxiManagement0/TaxiManagement0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/TaxiManagement0.csproj",
+        "projectUniqueName": "/Users/matthesneumann/Desktop/Dev/School/TaxiManagement0/TaxiManagement0/TaxiManagement0.csproj",
         "projectName": "TaxiManagement0",
-        "projectPath": "/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/TaxiManagement0.csproj",
+        "projectPath": "/Users/matthesneumann/Desktop/Dev/School/TaxiManagement0/TaxiManagement0/TaxiManagement0.csproj",
         "packagesPath": "/Users/matthesneumann/.nuget/packages/",
-        "outputPath": "/Users/matthesneumann/RiderProjects/TaxiManagement0/TaxiManagement0/obj/",
+        "outputPath": "/Users/matthesneumann/Desktop/Dev/School/TaxiManagement0/TaxiManagement0/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/matthesneumann/.nuget/NuGet/NuGet.Config"

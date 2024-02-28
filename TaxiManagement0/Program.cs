@@ -3,11 +3,13 @@
 using TaxiManagement0;
 
 Console.WriteLine("Hello, World!");
-Kiosk kiosk = new Kiosk(100);
-kiosk.PrintEv();
 
-kiosk.BuyDrink("IngwerLimonade", 3, 1, 20240213, 10, 3);
-kiosk.PrintEv();
+InputInterface inter = new InputInterface();
+int stop;
 
-kiosk.SellDrink("IngwerLimonade", 10, 3);
-kiosk.PrintEv();
+do
+{
+    stop = inter.PrintMenu();
+}
+while(stop != 1);
+
